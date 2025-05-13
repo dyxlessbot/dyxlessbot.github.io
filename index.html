@@ -62,7 +62,16 @@
   <footer>
     &copy; 2025 Dyxless Bot. Все права защищены.
   </footer>
-
+<script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('cut', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+      if ((e.ctrlKey || e.metaKey) && (['c', 'x', 'a'].includes(e.key.toLowerCase()))) {
+        e.preventDefault();
+      }
+    });
+</script>
   <script src="js/script.min.js"></script>
 </body>
 </html>
